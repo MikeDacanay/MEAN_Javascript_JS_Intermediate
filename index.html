@@ -4,6 +4,50 @@
 	<title></title>
 </head>
 <body>
+	<script>
+		//Part I
+		function starString(n){
+			let temp="";
+			for(let i=0;i<n;i++){
+				temp=temp+"*";
+			}
+			return temp;
+		}
 
+		//Part II
+		function drawstars(arr){
+			let temp='';
+			for(let i=0; i<arr.length; i++){
+				temp2='';
+				for(let j=0; j<arr[i]; j++){
+					temp2=temp2+'*';
+				}
+				temp=temp+temp2+'\n';
+			}
+			return temp;
+		}
+
+		//Part III
+		function drawstars2(arr){
+			let temp='';
+			for(let i=0; i<arr.length; i++){
+				temp2='';
+				if(arr[i].constructor==Number){
+					for(let j=0; j<arr[i]; j++){
+						temp2=temp2+'*';
+					}
+				}
+				if(arr[i].constructor==String){
+					for(let k=0;k<arr[i].length;k++){
+					temp2=temp2+arr[i][0].toLowerCase();
+					}
+				}
+				temp=temp+temp2+'\n';
+			}
+			return temp;
+		}
+
+		console.log(drawstars2([4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"]));
+	</script>
 </body>
 </html>
